@@ -3,27 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>RevenShadeX Studio</title>
-
   <!-- TAB ICON / FAVICON -->
   <link rel="icon" type="image/png" href="favicon.png">
-
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
     html {
       scroll-behavior: smooth;
       overscroll-behavior: none;
     }
-
     body {
       background: #0a0a0f;
       color: #e5e7eb;
       overflow-x: hidden;
     }
-
     /* LOADER */
     #loader {
       position: fixed;
@@ -35,7 +29,6 @@
       z-index: 9999;
       transition: opacity .4s ease;
     }
-
     .loader-circle {
       width: 60px;
       height: 60px;
@@ -44,11 +37,9 @@
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
-
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
-
     /* REVEAL */
     .reveal {
       opacity: 0;
@@ -56,23 +47,19 @@
       filter: blur(4px);
       transition: .9s ease;
     }
-
     .reveal.visible {
       opacity: 1;
       transform: translateY(0);
       filter: blur(0);
     }
-
     /* FLOAT */
     @keyframes float {
       0%,100% { transform: translateY(0); }
       50% { transform: translateY(-12px); }
     }
-
     .float {
       animation: float 4s ease-in-out infinite;
     }
-
     /* PARALLAX */
     .parallax-bg {
       position: absolute;
@@ -85,37 +72,38 @@
     }
   </style>
 </head>
-
 <body>
-
 <!-- LOADER -->
 <div id="loader">
   <div class="loader-circle"></div>
 </div>
-
 <!-- HERO -->
 <section class="relative h-screen flex flex-col items-center justify-center text-center px-6">
   <div id="parallax" class="parallax-bg"></div>
-
   <h1 class="text-6xl md:text-7xl font-extrabold text-white mb-4 float reveal">
     RevenShadeX Studio
   </h1>
-
   <p class="text-lg md:text-2xl text-gray-300 max-w-xl reveal" style="transition-delay:.2s">
     Anime-crafted aesthetics forged for the web.
   </p>
-
-  <a href="#services"
-     class="mt-8 px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-xl text-white shadow-lg transition reveal"
-     style="transition-delay:.4s">
-    Enter the Realm
-  </a>
+  
+  <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+    <a href="#services"
+       class="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-xl text-white shadow-lg transition reveal"
+       style="transition-delay:.4s">
+      Enter the Realm
+    </a>
+    <a href="hire.html"
+       class="px-8 py-3 bg-white/10 hover:bg-white/20 border border-purple-500 rounded-xl text-white shadow-lg transition reveal"
+       style="transition-delay:.5s">
+      Hire Me
+    </a>
+  </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="py-24 px-6 bg-[#0d0d14]">
   <h2 class="text-4xl font-bold text-center mb-16 reveal">Services</h2>
-
   <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
     <!-- CARD -->
     <div class="bg-[#1a1a25] p-8 rounded-3xl shadow-xl hover:scale-[1.03] transition reveal">
@@ -123,31 +111,26 @@
       <h3 class="text-2xl font-semibold mb-2">Anime Web Design</h3>
       <p class="text-gray-400">Precision. Minimalism. Aesthetic storytelling.</p>
     </div>
-
     <div class="bg-[#1a1a25] p-8 rounded-3xl shadow-xl hover:scale-[1.03] transition reveal">
       <img src="service2.webp" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-xl mb-4">
       <h3 class="text-2xl font-semibold mb-2">Full Stack Dev</h3>
       <p class="text-gray-400">Speed and structure without compromise.</p>
     </div>
-
     <div class="bg-[#1a1a25] p-8 rounded-3xl shadow-xl hover:scale-[1.03] transition reveal">
       <img src="service3.webp" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-xl mb-4">
       <h3 class="text-2xl font-semibold mb-2">Landing Pages</h3>
       <p class="text-gray-400">Conversion wrapped in anime energy.</p>
     </div>
-
     <div class="bg-[#1a1a25] p-8 rounded-3xl shadow-xl hover:scale-[1.03] transition reveal">
       <img src="service4.webp" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-xl mb-4">
       <h3 class="text-2xl font-semibold mb-2">WordPress Setup</h3>
       <p class="text-gray-400">Themes, plugins, configs, mastery.</p>
     </div>
-
     <div class="bg-[#1a1a25] p-8 rounded-3xl shadow-xl hover:scale-[1.03] transition reveal">
       <img src="service5.webp" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-xl mb-4">
       <h3 class="text-2xl font-semibold mb-2">Optimization</h3>
       <p class="text-gray-400">Core Web Vitals & speed sorcery.</p>
     </div>
-
     <div class="bg-[#1a1a25] p-8 rounded-3xl shadow-xl hover:scale-[1.03] transition reveal">
       <img src="service6.webp" loading="lazy" decoding="async" class="w-full h-40 object-cover rounded-xl mb-4">
       <h3 class="text-2xl font-semibold mb-2">Bug Fixing</h3>
@@ -155,12 +138,10 @@
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="text-center py-6 text-gray-500 bg-[#0d0d14] text-sm">
   © 2026 Nyxen Studio
 </footer>
-
 <script>
   /* LOADER */
   window.addEventListener("load", () => {
@@ -168,7 +149,6 @@
     loader.style.opacity = "0";
     setTimeout(() => loader.remove(), 400);
   });
-
   /* REVEAL */
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
@@ -178,15 +158,12 @@
       }
     });
   }, { threshold: 0.15 });
-
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
   /* HERO IMAGE LOAD */
   const hero = document.getElementById("parallax");
   const img = new Image();
   img.src = "hero.webp";
   img.onload = () => hero.style.backgroundImage = "url(hero.webp)";
-
   /* PARALLAX (OPTIMIZED) */
   let ticking = false;
   window.addEventListener("scroll", () => {
@@ -199,6 +176,5 @@
     }
   });
 </script>
-
 </body>
 </html>
